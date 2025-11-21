@@ -1,0 +1,35 @@
+name: Chaos Detector
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  chaos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+
+      - name: Dramatic Warning
+        run: |
+          echo "🚨 ALERT 🚨"
+          echo "Someone just merged directly to MAIN!"
+          echo "Brace yourself... chaos is coming!"
+
+      - name: Simulate Chaos
+        run: |
+          echo "🔥🔥🔥 Deploying bugs to production..."
+          echo "🐛 Bug #1 released!"
+          echo "🐛 Bug #2 released!"
+          echo "🐛 Bug #3 released!"
+          echo "💸 CFO is crying..."
+          echo "🤯 DevOps is panicking..."
+          echo "😂 QA is laughing because they warned us!"
+
+      - name: Fail the workflow
+        run: |
+          echo "This workflow fails to remind you:"
+          echo "👉 Please use Pull Requests instead of merging directly to main!"
+          exit 1
