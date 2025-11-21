@@ -1,4 +1,5 @@
 # postgresqltest
 
-Naresh added by 
-adding my own code by sridhar 2nd time (new branch)
+Naresh added by
+adding my own code by sridhar 2nd time 
+
