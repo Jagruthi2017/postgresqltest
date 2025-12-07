@@ -12,7 +12,7 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v3
 
-      - name: Dramatic Warning
+      - name: Dramatic Warnings
         run: |
           echo "🚨 ALERT 🚨"
           echo "Someone just merged directly to MAIN!"
